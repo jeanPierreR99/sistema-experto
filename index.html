@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./imagenes/logo.png" />
+    <title>SISTEMA EXPERTO</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <h2 class="stroke">Sistema experto "PistonClub"</h2>
+    </div>
+    <div class="portada">
+        <div class="integrantes">
+            <span>integrantes</span>
+            <br>
+            <br>
+            <li>Reyes Frisancho Kevin jean Pierre</li>
+            <br>
+            <li>Angie Shakira Castillo Patatingo</li>
+            <br>
+            <li>Reque Arrobo Jorgue Manuel</li>
+        </div>
+        <div class="capa"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="rgb(15, 20, 27" fill-opacity="1"
+                d="M0,0L0,160L288,160L288,224L576,224L576,192L864,192L864,256L1152,256L1152,160L1440,160L1440,320L1152,320L1152,320L864,320L864,320L576,320L576,320L288,320L288,320L0,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+    <h2>seleccione las fallas</h2>
+    <section>
+        <div class="section">
+
+            <h2 style="text-align: center">Motor</h2>
+            <br>
+            <div class="grupo">
+                <span style="display: block;">1. Pierde fuerza la moto</span>
+                <input type="radio" class="motor" id="radio1" name="p1" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio2" name="p1" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">2. El cambio esta duro</span>
+                <input type="radio" class="motor" id="radio3" name="p2" value="1" onclick="motor();">si
+                <input type="radio" class="moror" id="radio4" name="p2" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">3. Humea en las mañanas</span>
+                <input type="radio" class="motor" id="radio5" name="p3" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio6" name="p3" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">4. Humea todo el tiempo</span>
+                <input type="radio" class="motor" id="radio7" name="p4" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio8" name="p4" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">5. Consume mucho aceite</span>
+                <input type="radio" class="motor" id="radio9" name="p5" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio10" name="p5" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">6. Consume mucha gasolina</span>
+                <input type="radio" class="motor" id="radio11" name="p6" value="1" onclick="motorr();">si
+                <input type="radio" class="motor" id="radio12" name="p6" value="0" onclick="motorr();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">7. El balancin suena</span>
+                <input type="radio" class="motor" id="radio11" name="p7" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio12" name="p7" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">8. Vota aceite en el eje de arrastre</span>
+                <input type="radio" class="motor" id="radio11" name="p8" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio12" name="p8" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">9. Vota aceite por el cilindro</span>
+                <input type="radio" class="motor" id="radio11" name="p9" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio12" name="p9" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">10. Recalienta mucho</span>
+                <input type="radio" class="motor" id="radio11" name="p10" value="1" onclick="motor();">si
+                <input type="radio" class="motor" id="radio12" name="p10" value="0" onclick="motor();">no
+                <br>
+                <br>
+            </div>
+            <span>RESPUESTA:&nbsp</span>
+            <span id="resultado" style="color:red"></span>
+        </div>
+
+        <div class="section">
+
+            <h2 style="text-align: center">Sistema eléctrico</h2>
+            <br>
+            <div class="grupo">
+                <span style="display: block;">11. cuando frena se enciende el foco de peligro</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p11" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p11" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">12. La luz larga enciende</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p12" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p12" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">13. La bateria carga</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p13" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p13" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">14. El clapson funciona</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p14" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p14" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">15. El boton de encendido funciona</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p15" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p15" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">16. Cuando acelera los focos se queman</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p16" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p16" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">17. La chapa de contacto funciona</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p17" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p17" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">18. Las luces laterales encienden</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p18" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p18" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">19. Muestra los cambios en el tablero</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p19" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p19" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">20. Cuando presionas el boton rojo se apaga la moto</span>
+                <input type="radio" class="sistema_electrico" id="radio1" name="p20" value="1"
+                    onclick="sistema_electrico();">si
+                <input type="radio" class="sistema_electrico" id="radio2" name="p20" value="0"
+                    onclick="sistema_electrico();">no
+                <br>
+                <br>
+            </div>
+            <span>RESPUESTA:&nbsp</span>
+            <span id="resultado2" style="color:red"></span>
+        </div>
+
+        <div class="section">
+
+            <h2 style="text-align: center">telescopio</h2>
+            <br>
+            <div class="grupo">
+                <span style="display: block;">21. El telescopio vota aceite</span>
+                <input type="radio" class="telescopio" id="radio1" name="p21" value="1" onclick="telescopio();">si
+                <input type="radio" class="telescopio" id="radio2" name="p21" value="0" onclick="telescopio();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">22. El telescopio amortigua</span>
+                <input type="radio" class="telescopio" id="radio1" name="p22" value="1" onclick="telescopio();">si
+                <input type="radio" class="telescopio" id="radio2" name="p22" value="0" onclick="telescopio();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">23. El vaso del telescopio se safa</span>
+                <input type="radio" class="telescopio" id="radio1" name="p23" value="1" onclick="telescopio();">si
+                <input type="radio" class="telescopio" id="radio2" name="p23" value="0" onclick="telescopio();">no
+                <br>
+                <br>
+            </div>
+            <span>RESPUESTA:&nbsp</span>
+            <span id="resultado3" style="color:red"></span>
+        </div>
+
+        <div class="section">
+
+            <h2 style="text-align: center">Sistema de arrastre</h2>
+            <br>
+            <div class="grupo">
+                <span style="display: block;">24. La cadena suena</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p24" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p24" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">25. La cadena se safa</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p25" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p25" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">26. La cadena se mantiene ajustada</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p26" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p26" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">27. La catalina se resvala</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p27" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p27" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">28. Los dientes del piñon agarran bien a la cadena</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p28" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p28" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">29. El templador ajsuta</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p29" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p29" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">30. La cadena esta oxidada</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p30" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p30" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">31. El piñon se safa</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p31" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p31" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">32. El candado de la cadena se sale</span>
+                <input type="radio" class="sistema_arrastre" id="radio1" name="p32" value="1"
+                    onclick="sistema_arrastre();">si
+                <input type="radio" class="sistema_arrastre" id="radio2" name="p32" value="0"
+                    onclick="sistema_arrastre();">no
+                <br>
+                <br>
+            </div>
+
+            <span>RESPUESTA:&nbsp</span>
+            <span id="resultado4" style="color:red"></span>
+        </div>
+
+        <div class="section">
+
+            <h2 style="text-align: center">Neumáticos</h2>
+            <br>
+            <div class="grupo">
+                <span style="display: block;">33. El neumático se frena</span>
+                <input type="radio" class="neumaticos id=" radio1" name="p33" value="1" onclick="neumaticos();">si
+                <input type="radio" class="neumaticos id=" radio2" name="p33" value="0" onclick="neumaticos();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">34. El neumático suena</span>
+                <input type="radio" class="neumaticos id=" radio1" name="p34" value="1" onclick="neumaticos();">si
+                <input type="radio" class="neumaticos id=" radio2" name="p34" value="0" onclick="neumaticos();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">35. Se desinfla constantemente</span>
+                <input type="radio" class="neumaticos id=" radio1" name="p35" value="1" onclick="neumaticos();">si
+                <input type="radio" class="neumaticos id=" radio2" name="p35" value="0" onclick="neumaticos();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">36. Se mueve a los costados</span>
+                <input type="radio" class="neumaticos id=" radio1" name="p36" value="1" onclick="neumaticos();">si
+                <input type="radio" class="neumaticos id=" radio2" name="p36" value="0" onclick="neumaticos();">no
+                <br>
+                <br>
+            </div>
+
+            <span>RESPUESTA:&nbsp</span>
+            <span id="resultado5" style="color:red"></span>
+        </div>
+
+        <div class="section">
+
+            <h2 style="text-align: center">Carburador</h2>
+            <br>
+            <div class="grupo">
+                <span style="display: block;">37. El carburador vota gasolina</span>
+                <input type="radio" class="carburador" id="radio1" name="p37" value="1" onclick="carburador();">si
+                <input type="radio" class="carburador" id="radio2" name="p37" value="0" onclick="carburador();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">38. El carburador no sube el minimo</span>
+                <input type="radio" class="carburador" id="radio3" name="p38" value="1" onclick="carburador();">si
+                <input type="radio" class="carburador" id="radio4" name="p38" value="0" onclick="carburador();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">39. Cuando acelera se apaga</span>
+                <input type="radio" class="carburador" id="radio5" name="p39" value="1" onclick="carburador();">si
+                <input type="radio" class="carburador" id="radio6" name="p39" value="0" onclick="carburador();">no
+                <br>
+                <br>
+            </div>
+            <div class="grupo">
+                <span style="display: block;">40. No acelera</span>
+                <input type="radio" class="carburador" id="radio5" name="p40" value="1" onclick="carburador();">si
+                <input type="radio" class="carburador" id="radio6" name="p40" value="0" onclick="carburador();">no
+                <br>
+                <br>
+            </div>
+            <span>RESPUESTA:&nbsp</span>
+            <span id="resultado6" style="color:red"></span>
+
+    </section>
+    <div class="generales">
+        <h2>Resultado generales</h2>
+        <div class="general-group">
+            <span>CARBURADOR:&nbsp </span>
+            <span id="gen1" style="color:red">.....................</span>
+        </div>
+        <div class="general-group">
+            <span>SISTEMA ELECTRICO:&nbsp </span>
+            <span id="gen2" style="color:red">.....................</span>
+        </div>
+        <div class="general-group">
+            <span>TELESCOPIO:&nbsp </span>
+            <span id="gen3" style="color:red">.....................</span>
+        </div>
+        <div class="general-group">
+            <span>SISTEMA DE ARRASTRE:&nbsp </span>
+            <span id="gen4" style="color:red">.....................</span>
+        </div>
+        <div class="general-group">
+            <span>NEUMATICOS:&nbsp </span>
+            <span id="gen5" style="color:red">.....................</span>
+        </div>
+        <div class="general-group">
+            <span>CARBURADOR:&nbsp </span>
+            <span id="gen6" style="color:red">.....................</span>
+        </div>
+    </div>
+    <script>
+        //10     
+        function motor() {
+            var input = document.querySelectorAll('.motor');
+            var resultado = document.getElementById('resultado');
+            var resultado_general = document.getElementById('gen1');
+            var porcen = 0;
+
+            input.forEach(function (data) {
+                if (data.checked) {
+                    porcen += parseInt(data.value);
+                }
+            })
+
+            if (porcen >= 6) {
+                resultado.textContent = "MALOGRADO";
+                resultado_general.textContent = "MALOGRADO"
+            }
+            else if (porcen >= 1) {
+                resultado.textContent = "POR REPARAR";
+                resultado_general.textContent = "POR REPARAR"
+            }
+            else if (porcen == 0) {
+                resultado.textContent = "NO NECESITA REPARACION";
+                resultado_general.textContent = "NO NECESITA REPARACION"
+            }
+            console.log("suma: " + porcen);
+        }
+        //10
+        function sistema_electrico() {
+            var input = document.querySelectorAll('.sistema_electrico');
+            var resultado = document.getElementById('resultado2');
+            var resultado_general = document.getElementById('gen2');
+            var porcen = 0;
+
+            input.forEach(function (data) {
+                if (data.checked) {
+                    porcen += parseInt(data.value);
+                }
+            })
+            
+            if (porcen >= 6) {
+                resultado.textContent = "MALOGRADO";
+                resultado_general.textContent = "MALOGRADO"
+            }
+            else if (porcen >= 1) {
+                resultado.textContent = "POR REPARAR";
+                resultado_general.textContent = "POR REPARAR"
+            }
+            else if (porcen == 0) {
+                resultado.textContent = "NO NECESITA REPARACION";
+                resultado_general.textContent = "NO NECESITA REPARACION"
+            }
+            console.log("suma: " + porcen);
+        }
+        //3    
+        function telescopio() {
+            var input = document.querySelectorAll('.telescopio');
+            var resultado = document.getElementById('resultado3');
+            var resultado_general = document.getElementById('gen3');
+            var porcen = 0;
+
+            input.forEach(function (data) {
+                if (data.checked) {
+                    porcen += parseInt(data.value);
+                }
+            })
+
+            if (porcen >= 3) {
+                resultado.textContent = "MALOGRADO";
+                resultado_general.textContent = "MALOGRADO"
+            }
+            else if (porcen >= 1) {
+                resultado.textContent = "POR REPARAR";
+                resultado_general.textContent = "POR REPARAR"
+            }
+            else if (porcen == 0) {
+                resultado.textContent = "NO NECESITA REPARACION";
+                resultado_general.textContent = "NO NECESITA REPARACION"
+            }
+            console.log("suma: " + porcen);
+        }
+
+        //8    
+        function sistema_arrastre() {
+            var input = document.querySelectorAll('.sistema_arrastre');
+            var resultado = document.getElementById('resultado4');
+            var resultado_general = document.getElementById('gen4');
+            var porcen = 0;
+
+            input.forEach(function (data) {
+                if (data.checked) {
+                    porcen += parseInt(data.value);
+                }
+            })
+
+            if (porcen >= 5) {
+                resultado.textContent = "MALOGRADO";
+                resultado_general.textContent = "MALOGRADO"
+            }
+            else if (porcen >= 1) {
+                resultado.textContent = "POR REPARAR";
+                resultado_general.textContent = "POR REPARAR"
+            }
+            else if (porcen == 0) {
+                resultado.textContent = "NO NECESITA REPARACION";
+                resultado_general.textContent = "NO NECESITA REPARACION"
+            }
+            console.log("suma: " + porcen);
+        }
+
+        //4    
+        function neumaticos() {
+            var input = document.querySelectorAll('.neumaticos');
+            var resultado = document.getElementById('resultado5');
+            var resultado_general = document.getElementById('gen5');
+            var porcen = 0;
+
+            input.forEach(function (data) {
+                if (data.checked) {
+                    porcen += parseInt(data.value);
+                }
+            })
+
+            if (porcen >= 3) {
+                resultado.textContent = "MALOGRADO";
+                resultado_general.textContent = "MALOGRADO"
+            }
+            else if (porcen >= 1) {
+                resultado.textContent = "POR REPARAR";
+                resultado_general.textContent = "POR REPARAR"
+            }
+            else if (porcen == 0) {
+                resultado.textContent = "NO NECESITA REPARACION";
+                resultado_general.textContent = "NO NECESITA REPARACION"
+            }
+            console.log("suma: " + porcen);
+        }
+
+        //4    
+        function carburador() {
+            var input = document.querySelectorAll('.carburador');
+            var resultado = document.getElementById('resultado6');
+            var resultado_general = document.getElementById('gen6');
+            var porcen = 0;
+
+            input.forEach(function (data) {
+                if (data.checked) {
+                    porcen += parseInt(data.value);
+                }
+            })
+
+            if (porcen >= 3) {
+                resultado.textContent = "MALOGRADO";
+                resultado_general.textContent = "MALOGRADO"
+            }
+            else if (porcen >= 1) {
+                resultado.textContent = "POR REPARAR";
+                resultado_general.textContent = "POR REPARAR"
+            }
+            else if (porcen == 0) {
+                resultado.textContent = "NO NECESITA REPARACION";
+                resultado_general.textContent = "NO NECESITA REPARACION"
+            }
+            console.log("suma: " + porcen);
+        }        
+    </script>
+
+    </script>
+    <script>
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop() == 0) {
+                $("#header").removeClass("cambio-header");
+            }
+            if ($(window).scrollTop() > 0) {
+                $("#header").addClass("cambio-header");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
